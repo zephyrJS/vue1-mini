@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vue2 mini</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                {{ msg }}
+            </div>
+            <div v-text="msg"></div>
+            <input type="text" v-model="msg">
+        </div>
+        <script src="./watcher.js"></script>
+        <script src="./dep.js"></script>
+        <script src="./observer.js"></script>
+        <script src="./compiler.js"></script>
+        <script src="./vue.js"></script>
+        <script>
+            vm = new Vue({
+              el:'#app',
+              data: {
+                msg: 'test',
+                parent: 'parent',
+                child: 'child'
+              }
+            })
+        </script>
+    </body>
+</html>
